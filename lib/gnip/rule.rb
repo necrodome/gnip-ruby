@@ -22,12 +22,12 @@ class Gnip::Rule
   def to_hash
     result = {}
     result['type'] = @type
-    result['value'] = @value
+    result['content'] = @value
     result
   end
 
   def self.from_hash(hash)
-    return Gnip::Rule.new(hash['type'], hash['value'])
+    return Gnip::Rule.new(hash['type'], hash['content'])
   end
 
   def self.from_xml(document)
